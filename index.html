@@ -4,40 +4,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Organize suas tarefas." />
-    <title>TO-DO LIST</title>
+    <meta name="description" content="Organize suas tarefas de forma simples e prática." />
+    <title>To-Do List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
     <header class="header">
         <div class="container">
             <div class="header__branch">
-                <img class="header__icon" src="/assets/img/rules-icon.svg" alt="To-Do List">
-                <h1 class="header__title">To-Do List</h1>
+                <img class="header__icon" src="/assets/img/rules-icon.svg" alt="" aria-hidden="true">
+                <h1 class="header__title">
+                    To-Do List
+                </h1>
             </div>
         </div>
     </header>
     <main class="container">
         <div class="tasks">
             <div class="tasks__header">
-                <h2 class="tasks__title">Tarefas</h2>
-                <p class="tasks__description">Organize suas tarefas</p>
+                <h2 class="tasks__title" id="tasks-title">
+                    Minhas tarefas
+                </h2>
+                <p class="tasks__description" id="tasks-description">
+                    Organize suas tarefas
+                </p>
             </div>
             <div class="tasks__card">
-                <form class="tasks__form" id="task-form">
-                    <input type="text" class="tasks__input" id="task-input" placeholder="Adicione uma nova tarefa">
-                    <button type="submit" class="tasks__button"><img class="tasks__button-icon"
-                            src="/assets/img/plus-line-icon.svg" alt="">Adicionar</button>
+                <form class="tasks__form" id="task-form" aria-labelledby="tasks-title"
+                    aria-describedby="tasks-description">
+                    <input type="text" class="tasks__input" id="task-input" name="task"
+                        placeholder="Adicione uma nova tarefa" autocomplete="off" required>
+                    <button type="submit" class="tasks__button">
+                        <img class="tasks__button-icon" src="/assets/img/plus-line-icon.svg" alt="" aria-hidden="true">
+                        Adicionar
+                    </button>
                 </form>
             </div>
-            <div class="tasks__list"></div>
+            <div class="tasks__list" aria-live="polite" aria-label="Lista de tarefas"></div>
         </div>
     </main>
     <script src="js/script.js"></script>
 </body>
-
 </html>
