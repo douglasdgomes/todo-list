@@ -49,6 +49,10 @@ body {
     margin: 0;
 }
 
+.tasks {
+    padding: 40px 0;
+}
+
 .tasks__header {
    margin-bottom: 24px;
    margin-top: 24px;

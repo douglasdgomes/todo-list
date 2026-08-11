@@ -28,27 +28,13 @@
                 <p class="tasks__description">Organize suas tarefas</p>
             </div>
             <div class="tasks__card">
-                <form class="tasks__form">
-                    <input type="text" class="tasks__input" placeholder="Adicione uma nova tarefa">
+                <form class="tasks__form" id="task-form">
+                    <input type="text" class="tasks__input" id="task-input" placeholder="Adicione uma nova tarefa">
                     <button type="submit" class="tasks__button"><img class="tasks__button-icon"
                             src="/assets/img/plus-line-icon.svg" alt="">Adicionar</button>
                 </form>
             </div>
-            <div class="tasks__list">
-                <div class="task">
-                    <label class="task__check">
-                        <input type="checkbox" class="task__checkbox"> 
-                        <span class="task__checkmark"></span> 
-                    </label>
-                    <p class="task__text">Tarefa 1</p>
-                    <div class="task__actions">
-                        <button class="task__button task__button--edit"><img class="task__edit-icon"
-                                src="/assets/img/pencil-icon.svg" alt=""></button>
-                        <button class="task__button task__button--delete"><img class="task__delete-icon"
-                                src="/assets/img/delete-icon.svg" alt=""></button>
-                    </div>
-                </div>
-            </div>
+            <div class="tasks__list"></div>
         </div>
     </main>
     <script src="js/script.js"></script>
