@@ -36,6 +36,11 @@ function renderTasks() {
                 <button class="task__button task__button--delete"><img class="task__delete-icon" src="/assets/img/delete-icon.svg" alt=""></button>
             </div>
         `;
+        const checkboxes = taskElement.querySelector('.task__checkbox');
+        checkboxes.addEventListener('change', function (event) {
+            task.completed = event.target.checked;
+            renderTasks();
+        });
         taskList.appendChild(taskElement);
     });
 }
