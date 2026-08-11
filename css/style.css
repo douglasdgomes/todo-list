@@ -252,8 +252,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #22C55E;
-    border-color: #22C55E;
+    background-color: #514ced;
+    border-color: #514ced;
 }
 
 .task__checkbox:checked + .task__checkmark::after {
@@ -274,6 +274,14 @@ body {
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
+}
+
+.task__button--save {
+    background-color: #3C9C4A;
+}
+
+.task__button--save:hover {
+    background-color: #4CAF58;
 }
 
 .task__button--edit {
@@ -316,4 +324,9 @@ body {
     height: 18px;
 
     object-fit: contain;
+}
+
+.task__edit-input {
+    flex: 1;
+    min-width: 0;
 }
