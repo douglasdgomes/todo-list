@@ -37,10 +37,21 @@ function renderTasks() {
             </div>
         `;
         const checkboxes = taskElement.querySelector('.task__checkbox');
+        const deleteButton = taskElement.querySelector('.task__button--delete');
+
         checkboxes.addEventListener('change', function (event) {
             task.completed = event.target.checked;
             renderTasks();
         });
+
+        deleteButton.addEventListener('click', function () {
+            const taskIndex = tasks.findIndex(t => t.id === task.id);
+            if (taskIndex !== -1) {
+                tasks.splice(taskIndex, 1);
+                renderTasks();
+            }
+        });
+        
         taskList.appendChild(taskElement);
     });
 }
